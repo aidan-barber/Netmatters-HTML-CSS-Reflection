@@ -1,0 +1,206 @@
+@media only screen and (min-width: 414) {
+  header {
+    height: 736px;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  header {
+    height: 110px;
+    .navbarhead {
+      width: 750px;
+      height: 110px;
+      .navbar {
+        height: 70px;
+        .nm-logo {
+          height: 60px;
+          width: 375px;
+          img {
+            height: 60px;
+            width: 345px;
+          }
+        }
+        .action_menu {
+          padding: 7px 0;
+          width: 340px;
+          height: 70px;
+          justify-content: flex-end;
+          .search,
+          .search_btn {
+            display: inline-block;
+          }
+          .phone_button {
+            display: none;
+          }
+          .search {
+            width: 163px;
+            height: 54px;
+            margin: 0;
+          }
+          .search_btn {
+            width: 63px;
+            height: 56px;
+            padding: 0px 20px 0px 20px;
+            line-height: 56px;
+          }
+          .burger_button {
+            width: 63px;
+            height: 56px;
+            margin-left: 20px;
+          }
+          .burger_button_container {
+            margin: 0;
+          }
+        }
+      }
+      .mobile_search_field {
+        display: none;
+      }
+    }
+  }
+  .slide_container {
+    height: 796px;
+    .slide {
+      height: 797px;
+      .slide_inner {
+        margin: 0 auto;
+      }
+    }
+  }
+  .info_container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+    div[class*="info_"] {
+      height: 100%;
+    }
+    .info_bespoke,
+    .info_it,
+    .info_digital {
+      width: 100%;
+      p {
+        height: 44px;
+        width: 658px;
+      }
+    }
+    .info_telecoms,
+    .info_web,
+    .info_cyber {
+      height: 312px;
+      width: 245px;
+      p {
+        width: 283px;
+        height: 66px;
+      }
+    }
+  }
+  .about{
+    height: 493px;
+    .about_inner{
+      width: 750px;
+      height: 493px;
+      padding: 50px 15px;
+      margin: auto;
+    }
+  }
+  .latest_news{
+    width: 720px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .news_container{
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 750px;
+    margin: 0 auto;
+    justify-content: space-between;
+    .news_one,
+    .news_two{
+      width: 345px;
+      height: 569px;
+    }
+    .news_three{
+      display: none;
+    }
+  }
+  .clientele{
+    display: block;
+  }
+  .footer_shell_outer{
+    width: 100%;
+    height: 528px;
+    .footer_shell_inner{
+      margin: auto;
+      width: 750px;
+      height: 438px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .contact_us,
+      .about_netmatters,
+      .website_info,
+      .social_media{
+        width: 50%;
+      }
+    }
+  }
+  .partners_out{
+    display: block;
+  }
+}
+@media only screen and (min-width: 992px){
+  header{
+   height: 110px;
+   .navbarhead{
+     width: 975px;
+     height: 110px;
+     .navbar{
+       height: 70px;
+       margin: 0;
+       .nm-logo{
+        height: 70px;
+        width: 404px;
+        img{
+          width: 374px;
+          height: 65px;
+        }
+       }
+       .action_menu{
+         height: 70px;
+         width: 565px;
+         padding: 7px 0 7px 0;
+         justify-content: flex-end;
+         .supportbtn,
+         .contactbtn{
+           display: block;
+           font-size: 18px;
+         }
+         .search{
+           display: none;
+         }
+         .search_btn{
+           border-radius: 3px;
+           margin-left: 20px;
+         }
+       }
+     }
+   }
+   .sub_menu{
+    display: block;
+    width: 100%;
+    height: 99px;
+    background-color: #333645;
+    .sub_menu_btns{
+      display: flex;
+      width: 945px;
+      margin: 0 auto;
+      div[class*=_container]{
+        width: 157.56px;
+        height: 99px;
+      }
+    }
+   }
+  }
+}
