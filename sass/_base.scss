@@ -218,8 +218,7 @@ body {
   width: auto;
   margin-top: 0px;
   .slide {
-    background-image: linear-gragient(260deg, transparrent 30%, #000),
-      url("img/home-3wAI.jpg");
+    background-image: url("../img/home-3wAI.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -331,7 +330,11 @@ body {
     &:hover {
       text-decoration: none;
     }
+    
   }
+}
+.container_three{
+  display: flex;
 }
 .about {
   display: block;
@@ -339,9 +342,15 @@ body {
   height: auto;
   margin-top: 50px;
   background-color: #333645;
+  img{
+    width: 1263px;
+    height: 593px;
+    position: absolute;
+  }
   .about_inner {
     color: #ffffff;
     padding: 50px 15px 50px 15px;
+    
     h1 {
       text-transform: uppercase;
       margin-top: -6px;
@@ -397,7 +406,7 @@ body {
 }
 .news_container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   width: auto;
   padding: 50px 15px;
   height: auto;
@@ -405,7 +414,7 @@ body {
   .news_two,
   .news_three {
     display: block;
-    width: auto;
+    width: 300px;
     border-radius: 3px;
     margin-bottom: 30px;
     position: relative;
@@ -565,7 +574,7 @@ body {
   }
 }
 .clientele {
-  display: none;
+  display: flex;
   width: auto;
   height: 145px;
   padding: 50px 15px;
@@ -574,13 +583,12 @@ body {
     display: flex;
     margin: 0 auto;
     padding: 0px 15px;
-    width: 750px;
     height: 45px;
 
     div[class*="cl_"] {
       padding: 0px 20px;
       height: auto;
-      width: auto;
+      width: 188px;
       position: relative;
       img {
         height: 100%;
@@ -639,9 +647,7 @@ body {
         display: block;
       }
     }
-    .footer_shell_outer {
-      display: block;
-      background-color: #333645;
+    
       .footer_shell_inner {
         display: flex;
         flex-direction: column;
@@ -666,6 +672,7 @@ body {
         .about_net,
         .website_netmatters,
         .social_media {
+          width: 300px;
           display: flex;
           flex-direction: column;
           flex-wrap: wrap;
@@ -722,12 +729,16 @@ body {
         }
       }
     }
+    .footer_shell_outer {
+      display: block;
+      background-color: #333645;
     .partners_out {
       display: none;
       padding: 50px 0;
       width: auto;
       height: 187px;
-      .partners_in {
+      .partners_inner {
+        display: flex;
         width: 750px;
         height: 87px;
         padding: 0 15px;
@@ -757,3 +768,13 @@ body {
   }
 }
 
+.footer_shell_inner{
+  display: flex;
+  .about_netmatters{
+    flex-direction: column;
+    display: flex;
+  }
+}
+.partners_inner{
+  display: flex;
+}
