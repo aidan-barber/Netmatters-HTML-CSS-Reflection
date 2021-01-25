@@ -12,7 +12,7 @@ body {
 }
 
 .navbarhead {
-  height: 167px;
+  height: auto;
   padding: 20px 15px;
   display: flex;
   justify-content: space-between;
@@ -22,7 +22,7 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  //justify-content: space-between;
   height: 70px;
   width: 100%;
 
@@ -31,6 +31,7 @@ body {
       height: auto;
       width: 100%;
       max-height: 70px;
+      margin-left: 25px;
     }
   }
 
@@ -52,7 +53,7 @@ body {
       color: white;
       text-align: center;
       text-decoration: none;
-      display: always;
+      display: none;
       font-size: 18px;
       justify-content: center;
       line-height: 56px;
@@ -66,7 +67,6 @@ body {
     }
 
     .supportbtn {
-      display: always;
       width: 144px;
       background: #4183d7;
 
@@ -76,7 +76,6 @@ body {
     }
 
     .contactbtn {
-      display: always;
       background: #999aa2;
       width: 152px;
       margin-left: 20px;
@@ -86,9 +85,15 @@ body {
       }
     }
 
+    .searching {
+      display: flex;
+      width: 100%;
+    }
+
     .search {
-      display: always;
+      height: 50px;
       input {
+        flex-grow: 1;
         padding: 0 0 0 10px;
         width: 163px;
         height: 56px;
@@ -100,7 +105,6 @@ body {
     }
 
     .search_btn {
-      display: always;
       align-items: center;
       text-align: center;
       height: 56px;
@@ -151,6 +155,9 @@ body {
       background-color: #333645;
       border-radius: 3px;
     }
+    i{
+      color: #ffffff;
+    }
   }
 }
 
@@ -198,6 +205,7 @@ body {
     }
     .sub_button {
       display: flex;
+      align-items: center;
       justify-content: center;
       flex-direction: column;
       width: 157.5px;
@@ -242,7 +250,7 @@ body {
         }
       }
       h1 {
-        font-size: 48px;
+        font-size: 20px;
         text-transform: uppercase;
       }
       p {
@@ -252,7 +260,7 @@ body {
         display: block;
         height: 62px;
         width: 224px;
-        padding: 5px 0px;
+        padding: 5px 5px 0 0;
         background-color: #926fb1;
         border-radius: 3px;
         line-height: 50px;
@@ -330,10 +338,9 @@ body {
     &:hover {
       text-decoration: none;
     }
-    
   }
 }
-.container_three{
+.container_three {
   display: flex;
 }
 .about {
@@ -342,7 +349,7 @@ body {
   height: auto;
   margin-top: 50px;
   background-color: #333645;
-  img{
+  img {
     width: 1263px;
     height: 593px;
     position: absolute;
@@ -350,7 +357,7 @@ body {
   .about_inner {
     color: #ffffff;
     padding: 50px 15px 50px 15px;
-    
+
     h1 {
       text-transform: uppercase;
       margin-top: -6px;
@@ -647,91 +654,91 @@ body {
         display: block;
       }
     }
-    
-      .footer_shell_inner {
+
+    .footer_shell_inner {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      height: 894px;
+      padding: 47px 0px 13px 0px;
+      color: #ffffff;
+      h4 {
+        font-size: 16px;
+        margin-bottom: 26px;
+        line-height: 17px;
+      }
+      ul {
+        padding: 0;
+        list-style-type: none;
+        display: block;
+        font-size: 13px;
+        list-style: none;
+        line-height: 22px;
+      }
+      .contact_us,
+      .about_net,
+      .website_netmatters,
+      .social_media {
+        width: 300px;
         display: flex;
         flex-direction: column;
-        width: auto;
-        height: 894px;
-        padding: 47px 0px 13px 0px;
-        color: #ffffff;
-        h4 {
-          font-size: 16px;
-          margin-bottom: 26px;
-          line-height: 17px;
-        }
-        ul {
-          padding: 0;
-          list-style-type: none;
-          display: block;
-          font-size: 13px;
-          list-style: none;
-          line-height: 22px;
-        }
-        .contact_us,
-        .about_net,
-        .website_netmatters,
-        .social_media {
-          width: 300px;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          padding: 0px 15;
-          margin-bottom: 30px;
-          a {
+        flex-wrap: wrap;
+        padding: 0px 15;
+        margin-bottom: 30px;
+        a {
+          color: #ffffff;
+          &:hover {
             color: #ffffff;
-            &:hover {
-              color: #ffffff;
-            }
-            &:active {
-              color: #000000;
-            }
           }
-        }
-      }
-      .social_media {
-        .social_media_inner {
-          margin: -26px;
-          height: 170px;
-          display: flex;
-          flex-direction: column;
-          flex-wrap: wrap;
-          a {
-            display: block;
-            height: 55px;
-            margin: 30px 15px 0px 15px;
-            background-color: #000000;
-            font-size: 28px;
-            text-align: center;
-            line-height: 55px;
-            width: auto;
-            i {
-              &:active {
-                color: #ffffff;
-              }
-            }
-          }
-          .facebook {
-            &:hover {
-              background-color: #3b599a;
-            }
-          }
-          .twitter {
-            &:hover {
-              background-color: #00aced;
-            }
-          }
-          .linkedin {
-            &:hover {
-              background-color: #0077b5;
-            }
+          &:active {
+            color: #000000;
           }
         }
       }
     }
-    .footer_shell_outer {
-      display: block;
-      background-color: #333645;
+    .social_media {
+      .social_media_inner {
+        margin: -26px;
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        a {
+          display: block;
+          height: 55px;
+          margin: 30px 15px 0px 15px;
+          background-color: #000000;
+          font-size: 28px;
+          text-align: center;
+          line-height: 55px;
+          width: auto;
+          i {
+            &:active {
+              color: #ffffff;
+            }
+          }
+        }
+        .facebook {
+          &:hover {
+            background-color: #3b599a;
+          }
+        }
+        .twitter {
+          &:hover {
+            background-color: #00aced;
+          }
+        }
+        .linkedin {
+          &:hover {
+            background-color: #0077b5;
+          }
+        }
+      }
+    }
+  }
+  .footer_shell_outer {
+    display: block;
+    background-color: #333645;
     .partners_out {
       display: none;
       padding: 50px 0;
@@ -768,13 +775,39 @@ body {
   }
 }
 
-.footer_shell_inner{
+.footer_shell_inner {
   display: flex;
-  .about_netmatters{
+  .about_netmatters {
     flex-direction: column;
     display: flex;
   }
 }
-.partners_inner{
+.partners_inner {
   display: flex;
+}
+.web_design_icon_colour {
+  color: #926fb1;
+}
+.it_icon_colour {
+  color: #4183d7;
+}
+.telecoms_icon_colour {
+  color: #d64c41;
+}
+.bespoke_icon_colour {
+  color: #67809f;
+}
+.digital_marketing_icon_colour {
+  color: #7ace71;
+}
+.cyber_security_icon_colour {
+  color: #e55458;
+}
+.cyber_sec_text,
+.digital_mark_text,
+.bespoke_soft_tex,
+.telecoms_text,
+.it_supp_text,
+.web_des_text {
+  color: white;
 }

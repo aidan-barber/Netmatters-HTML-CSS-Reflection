@@ -67,6 +67,9 @@
   .slide_container .slide .slide_inner {
     margin: 0 auto;
   }
+  .slide_container .slide .slide_inner img {
+    width: 768px;
+  }
   .info_container {
     flex-direction: row;
     flex-wrap: wrap;
@@ -185,7 +188,10 @@
     display: block;
     font-size: 18px;
   }
-  header .navbarhead .navbar .action_menu .search {
+  header .navbarhead .navbar .action_menu .searching {
+    display: flex;
+  }
+  header .navbarhead .navbar .action_menu .search_btn {
     display: none;
   }
   header .navbarhead .navbar .action_menu .search_btn {
@@ -203,7 +209,7 @@
     width: 945px;
     margin: 0 auto;
   }
-  header .sub_menu .sub_menu_btns div[class*=_container] {
+  header .sub_menu .sub_menu_btns div[class*="_container"] {
     width: 157.56px;
     height: 99px;
   }
@@ -223,7 +229,7 @@ body {
 }
 
 .navbarhead {
-  height: 167px;
+  height: auto;
   padding: 20px 15px;
   display: flex;
   justify-content: space-between;
@@ -233,7 +239,6 @@ body {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
   height: 70px;
   width: 100%;
 }
@@ -242,6 +247,7 @@ body {
   height: auto;
   width: 100%;
   max-height: 70px;
+  margin-left: 25px;
 }
 
 .navbar .action_menu {
@@ -263,7 +269,7 @@ body {
   color: white;
   text-align: center;
   text-decoration: none;
-  display: always;
+  display: none;
   font-size: 18px;
   justify-content: center;
   line-height: 56px;
@@ -279,7 +285,6 @@ body {
 }
 
 .navbar .action_menu .supportbtn {
-  display: always;
   width: 144px;
   background: #4183d7;
 }
@@ -289,7 +294,6 @@ body {
 }
 
 .navbar .action_menu .contactbtn {
-  display: always;
   background: #999aa2;
   width: 152px;
   margin-left: 20px;
@@ -299,11 +303,17 @@ body {
   background: #84858f;
 }
 
+.navbar .action_menu .searching {
+  display: flex;
+  width: 100%;
+}
+
 .navbar .action_menu .search {
-  display: always;
+  height: 50px;
 }
 
 .navbar .action_menu .search input {
+  flex-grow: 1;
   padding: 0 0 0 10px;
   width: 163px;
   height: 56px;
@@ -314,7 +324,6 @@ body {
 }
 
 .navbar .action_menu .search_btn {
-  display: always;
   align-items: center;
   text-align: center;
   height: 56px;
@@ -371,6 +380,10 @@ body {
   border-radius: 3px;
 }
 
+.navbar .action_menu i {
+  color: #ffffff;
+}
+
 .mobile_search {
   position: relative;
   border-left: none;
@@ -420,6 +433,7 @@ body {
 
 .sub_menu .sub_menu_btns .sub_button {
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   width: 157.5px;
@@ -473,7 +487,7 @@ body {
 }
 
 .slide_container .slide .slide_inner h1 {
-  font-size: 48px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -485,7 +499,7 @@ body {
   display: block;
   height: 62px;
   width: 224px;
-  padding: 5px 0px;
+  padding: 5px 5px 0 0;
   background-color: #926fb1;
   border-radius: 3px;
   line-height: 50px;
@@ -1087,5 +1101,38 @@ body {
 
 .partners_inner {
   display: flex;
+}
+
+.web_design_icon_colour {
+  color: #926fb1;
+}
+
+.it_icon_colour {
+  color: #4183d7;
+}
+
+.telecoms_icon_colour {
+  color: #d64c41;
+}
+
+.bespoke_icon_colour {
+  color: #67809f;
+}
+
+.digital_marketing_icon_colour {
+  color: #7ace71;
+}
+
+.cyber_security_icon_colour {
+  color: #e55458;
+}
+
+.cyber_sec_text,
+.digital_mark_text,
+.bespoke_soft_tex,
+.telecoms_text,
+.it_supp_text,
+.web_des_text {
+  color: white;
 }
 /*# sourceMappingURL=main.css.map */
