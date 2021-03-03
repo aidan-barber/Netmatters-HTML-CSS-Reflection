@@ -1,6 +1,23 @@
-@media only screen and (min-width: 414) {
-  header {
-    height: 736px;
+//TO DO
+
+//Display about image at ?px breakpoint
+
+
+@media only screen and (min-width: 400px) {
+  .slide {
+    height: 531px;
+    h1 {
+      font-size: 48px;
+    }
+    h3 {
+      font-size: 20px;
+      color: white;
+    }
+  }
+  // .info_container{
+  // }
+  .container_three {
+    flex-direction: column;
   }
 }
 
@@ -8,52 +25,55 @@
   header {
     height: 110px;
     .navbarhead {
-      width: 750px;
+      width: 95%;
       height: 110px;
       .navbar {
         height: 70px;
         .nm-logo {
           height: 60px;
-          width: 375px;
+          //width: 375px;
           img {
             height: 60px;
             width: 345px;
           }
         }
-        .action_menu {
-          padding: 7px 0;
-          width: 340px;
-          height: 70px;
-          justify-content: flex-end;
-          .search,
-          .search_btn {
-            display: inline-block;
-          }
-          .phone_button {
-            display: none;
-          }
-          .search {
-            width: 163px;
-            height: 54px;
-            margin: 0;
-          }
-          .search_btn {
-            width: 63px;
-            height: 56px;
-            padding: 0px 20px 0px 20px;
+        .phone_button {
+          display: none;
+        }
+        .searching {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+        }
+        //styling for when the search is just a button
+        .search_btn {
+          display: block;
+          align-items: center;
+          text-align: center;
+          height: 56px;
+          width: 63px;
+          background: #999aa2;
+          justify-content: center;
+          border-radius: 0 4px 4px 0;
+          i {
+            font-size: 24px;
             line-height: 56px;
+            color: #ffffff;
           }
-          .burger_button {
-            width: 63px;
-            height: 56px;
-            margin-left: 20px;
-          }
-          .burger_button_container {
-            margin: 0;
+          &:hover {
+            background: #84858f;
           }
         }
+        .burger_button {
+          width: 63px;
+          height: 56px;
+          margin-left: 20px;
+        }
+        .burger_button_container {
+          margin: 0;
+        }
       }
-      .mobile_search_field {
+      .search_mobile {
         display: none;
       }
     }
@@ -64,38 +84,9 @@
       height: 797px;
       .slide_inner {
         margin: 0 auto;
-        img{
+        img {
           width: 768px;
         }
-      }
-    }
-  }
-  .info_container {
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    div[class*="info_"] {
-      height: 100%;
-    }
-    .info_bespoke,
-    .info_it,
-    .info_digital {
-      width: 100%;
-      p {
-        height: 44px;
-        width: 658px;
-      }
-    }
-    .info_telecoms,
-    .info_web,
-    .info_cyber {
-      height: 312px;
-      width: 245px;
-      p {
-        width: 283px;
-        height: 66px;
       }
     }
   }
@@ -108,26 +99,26 @@
       margin: auto;
     }
   }
-  .latest_news {
-    width: 720px;
-    padding: 0 15px;
-    margin: 0 auto;
-  }
+
+  // .latest_news {
+  //   width: 720px;
+  //   padding: 0 15px;
+  //   margin: 0 auto;
+  // }
+
   .news_container {
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 750px;
-    margin: 0 auto;
     justify-content: space-between;
     .news_one,
     .news_two {
-      width: 345px;
+      width: 45%;
       height: 569px;
     }
     .news_three {
       display: none;
     }
   }
+
   .clientele {
     display: block;
   }
@@ -152,6 +143,7 @@
     display: block;
   }
 }
+
 @media only screen and (min-width: 992px) {
   header {
     height: 110px;
@@ -206,6 +198,61 @@
           height: 99px;
         }
       }
+    }
+  }
+}
+
+//service card colors
+$service-colors: (
+  //software
+  "bespoke": #67809f,
+  //it
+  "it": #4083d7,
+  //digital
+  "digital": #2dcc71,
+  //telecoms
+  "telecoms": #d64541,
+  //web
+  "web": #926fb1,
+  //security
+  "cyber": #f62559,
+  //developer
+  "developer": #926fb1
+);
+
+//loop used for styling the service cards
+//to use => @include service-card-set($colorName);
+@mixin service-card-set($colorName) {
+  $s-color: map-get($service-colors, #{$colorName});
+  
+  //CARD default state
+  cursor: pointer;
+  .icon {
+    color: #fff;
+    background-color: $s-color;
+  }
+  .readmore {
+    background-color: $s-color;
+  }
+
+  //CARD hover state
+  &:hover {
+    background-color: $s-color;
+
+    .readmore {
+      color: $s-color;
+      background-color: #fff;
+    }
+    h2,
+    p {
+      color: white;
+    }
+    .icon {
+      color: $s-color;
+      background-color: #fff;
+    }
+    .underline {
+      background-color: #fff;
     }
   }
 }
