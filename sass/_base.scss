@@ -1,4 +1,8 @@
 /* BASE SCSS */
+* {
+  box-sizing: border-box;
+}
+
 header {
   background-color: #ffffff;
 }
@@ -14,7 +18,7 @@ body {
   height: auto;
   width: 90%;
   margin: 2em auto;
-  margin-bottom: 0;;
+  margin-bottom: 0;
 }
 
 .navbar {
@@ -30,7 +34,7 @@ body {
     width: 224px;
     max-width: 400px;
     flex-grow: 1;
-    
+
     img {
       width: 100%;
       height: auto;
@@ -52,7 +56,7 @@ body {
 
   .supportbtn,
   .contactbtn {
-    display: none;//changed
+    display: none; //changed
     border-radius: 3px;
     color: white;
     text-align: center;
@@ -109,7 +113,7 @@ body {
   }
 
   //styling needs correcting
-  .search_mobile { 
+  .search_mobile {
     order: 3;
     flex-grow: 1;
     position: relative;
@@ -127,7 +131,7 @@ body {
       height: 46px;
       width: 100%;
       padding: 5px 40px 5px 15px;
-      background-color: #E5E5E5;
+      background-color: #e5e5e5;
     }
     a {
       height: 100%;
@@ -172,15 +176,25 @@ body {
     width: 63px;
     background-color: #333645;
     border-radius: 3px;
-    
-    a{
+
+    a {
       text-decoration: none;
       color: #ffffff;
-      i{
+      i {
         color: #ffffff;
         font-size: 2em;
         // font-weight: 500;
       }
+    }
+
+    .line {
+      display: block;
+      height: 3px;
+      width: 20px;
+      background-color: #ffffff;
+      margin: auto;
+      padding: 0%;
+      margin-bottom: 5px;
     }
   }
   // i{
@@ -189,7 +203,7 @@ body {
 }
 
 .sub_menu {
-  display: none;//changed
+  display: none; //changed
   width: 100%;
   height: 99%;
   background-color: #333645;
@@ -228,6 +242,7 @@ body {
   margin-top: 0px;
   .slide {
     background-image: url("../img/home-3wAI.png");
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -251,10 +266,14 @@ body {
       }
 
       .slide_button {
-        height: 62px;
+        text-decoration: none;
+        display: inline-block;
+        border: 1px solid transparent;
+        line-height: 50px;
+        //height: 224.9px;
         background-color: #926fb1;
         color: white;
-        padding: 0 20px;
+        padding: 5px 20px;
         font-size: 1.25rem;
         border-radius: 3px;
         margin: 0 auto;
@@ -263,6 +282,9 @@ body {
         &:hover {
           background-color: #79539a;
         }
+        .slide_arrow{
+          margin-left: 10px;
+        }
       }
     }
   }
@@ -270,17 +292,17 @@ body {
 .info_container {
   display: flex;
   flex-direction: column;
-  height: auto;
   margin-top: 20px;
   text-decoration: none;
   align-items: center;
+  padding: 0 30px 0 30px;
 
   a {
     display: block;
     width: 100%;
     max-width: 720px;
     padding: 30px 30px;
-    margin: 30px 15px 0px 15px;
+    margin-top: 30px;
     text-align: center;
     border: 1px solid;
     border-color: #d3d3d3;
@@ -305,7 +327,7 @@ body {
       text-transform: capitalise;
       padding-bottom: 10px;
       font-weight: normal;
-      color: #4C4E5C;
+      color: #4c4e5c;
     }
     .underline {
       display: block;
@@ -322,29 +344,37 @@ body {
       line-height: 22px;
       margin-bottom: 13px;
       width: auto;
-      color: #4C4E5C;
+      color: #4c4e5c;
     }
   }
-  .info_bespoke{
+
+  .info_bespoke {
     @include service-card-set(bespoke);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_it{
+  .info_it {
     @include service-card-set(it);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_digital{
+  .info_digital {
     @include service-card-set(digital);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_telecoms{
+  .info_telecoms {
     @include service-card-set(telecoms);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_web{
+  .info_web {
     @include service-card-set(web);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_cyber{
+  .info_cyber {
     @include service-card-set(cyber);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
-  .info_developer{
+  .info_developer {
     @include service-card-set(developer);
+    box-shadow: 0 3px 35px rgb(0 0 0 / 10%);
   }
 }
 .readmore {
@@ -358,7 +388,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   color: #ffffff;
-  background-color: #67809F;
+  background-color: #67809f;
 }
 .container_three {
   display: flex;
@@ -604,7 +634,8 @@ body {
         font-size: 14px;
         margin-left: 20px;
         margin-top: 35px;
-        h4, p {
+        h4,
+        p {
           margin: 0;
         }
       }
@@ -694,7 +725,7 @@ body {
 footer {
   background-color: #333645;
   width: 100%;
-} 
+}
 .footer_shell_inner {
   display: flex;
   flex-direction: column;
@@ -731,7 +762,7 @@ footer {
     // h3{
     //     margin-left: auto;
     // }
-    
+
     a {
       text-decoration: none;
       color: #ffffff;
@@ -760,7 +791,7 @@ footer {
       display: block;
       width: 100%;
       height: 100%;
-      
+
       font-size: 28px;
       text-align: center;
       line-height: 55px;

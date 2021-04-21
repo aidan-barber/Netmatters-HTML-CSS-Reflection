@@ -2,7 +2,6 @@
 
 //Display about image at ?px breakpoint
 
-
 @media only screen and (min-width: 400px) {
   .slide {
     height: 531px;
@@ -142,6 +141,30 @@
   .partners_out {
     display: block;
   }
+
+  //service cards
+
+  .info_container {
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 !important;
+  }
+
+  .info_telecoms,
+  .info_web,
+  .info_cyber,
+  .info_developer {
+    width: 343px !important;
+  }
+  .info_telecoms,
+  .info_cyber {
+    margin-right: 15px;
+  }
+  .info_web,
+  .info_developer {
+    margin-left: 15px;
+  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -200,6 +223,65 @@
       }
     }
   }
+
+  //service cards
+  .info_bespoke,
+  .info_it,
+  .info_digital {
+    width: 292px !important;
+    height: 354px !important;
+  }
+
+  .info_bespoke {
+    margin-right: 15px;
+  }
+  .info_it {
+    margin: 0 15px;
+  }
+  .info_digital {
+    margin-left: 15px;
+  }
+
+  .info_telecoms,
+  .info_web,
+  .info_cyber,
+  .info_developer {
+    width: 453px !important;
+    height: 288px !important;
+  }
+  .info_telecoms,
+  .info_cyber {
+    margin-right: 15px;
+  }
+  .info_web,
+  .info_developer {
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (min-width: 1260px) {
+  //service cards
+  .info_bespoke,
+  .info_it,
+  .info_digital {
+    width: 370px !important;
+    height: 312px !important;
+  }
+
+  .info_telecoms,
+  .info_web,
+  .info_cyber,
+  .info_developer {
+    width: 270px !important;
+    height: 342px !important;
+  }
+
+  .info_web {
+    margin-right: 15px;
+  }
+  .info_cyber {
+    margin-left: 15px;
+  }
 }
 
 //service card colors
@@ -224,7 +306,7 @@ $service-colors: (
 //to use => @include service-card-set($colorName);
 @mixin service-card-set($colorName) {
   $s-color: map-get($service-colors, #{$colorName});
-  
+
   //CARD default state
   cursor: pointer;
   .icon {
